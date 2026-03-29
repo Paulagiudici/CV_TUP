@@ -1,67 +1,81 @@
-// Botón volver arriba
-const btnTop = document.getElementById("btn-top");
+/* ── 1. Botón volver al inicio ── */
+var btnTop = document.getElementById('btn-top');
 
-window.addEventListener("scroll", () => {
-  btnTop.classList.toggle("visible", window.scrollY > 400);
+window.addEventListener('scroll', function () {
+  btnTop.classList.toggle('visible', window.scrollY > 400);
 });
 
-btnTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+btnTop.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Fade-in
-const fadeEls = document.querySelectorAll(".fade-in");
+/* ── 2. Fade-in al hacer scroll ── */
+var fadeEls = document.querySelectorAll('.fade-in');
 
-const fadeObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add("visible"), i * 80);
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+var fadeObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry, i) {
+    if (entry.isIntersecting) {
+      setTimeout(function () {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
 
-fadeEls.forEach(el => fadeObserver.observe(el));
+fadeEls.forEach(function (el) { fadeObserver.observe(el); });
 
-// Animación barras
-const skillCards = document.querySelectorAll(".skill-card");
+/* ── 3. Animación barras de habilidades ── */
+var skillCards = document.querySelectorAll('.skill-card');
 
-const barObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const fill = entry.target.querySelector(".skill-fill");
-        if (fill) fill.style.width = fill.dataset.width;
-        barObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
+var barObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      var fill = entry.target.querySelector('.skill-fill');
+      if (fill) fill.style.width = fill.getAttribute('data-width');
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
 
-skillCards.forEach(card => barObserver.observe(card));
+skillCards.forEach(function (card) { barObserver.observe(card); });
 
-// Formulario
-document.getElementById("contact-form").addEventListener("submit", e => {
+/* ── 4. Formulario de contacto ── */
+document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const nombre = document.getElementById("nombre").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const mensaje = document.getElementById("mensaje").value.trim();
+  var nombre  = document.getElementById('nombre').value.trim();
+  var email   = document.getElementById('email').value.trim();
+  var mensaje = document.getElementById('mensaje').value.trim();
 
   if (!nombre || !email || !mensaje) {
-    alert("Todos los campos son obligatorios.");
+    alert('Todos los campos son obligatorios.');
     return;
   }
 
-  const msg = document.getElementById("form-success");
-  msg.style.display = "block";
+  var msg = document.getElementById('form-success');
+  msg.style.display = 'block';
 
-  setTimeout(() => {
-    msg.style.display = "none";
-    e.target.reset();
+  setTimeout(function () {
+    msg.style.display = 'none';
+    document.getElementById('contact-form').reset();
   }, 2500);
+});
+
+/* ── 5. Exportar a PDF ── */
+document.getElementById('btn-pdf').addEventListener('click', function () {
+  // Hacer visibles todos los elementos fade-in antes de imprimir
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    el.classList.add('visible');
+  });
+
+  // Forzar barras de habilidades al ancho correcto
+  document.querySelectorAll('.skill-fill').forEach(function (fill) {
+    fill.style.width = fill.getAttribute('data-width');
+  });
+
+  // Pequeña pausa para que los estilos se apliquen, luego imprimir
+  setTimeout(function () {
+    window.print();
+  }, 150);
 });

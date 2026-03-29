@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,6 +24,15 @@
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+
+      <button class="btn-pdf" id="btn-pdf" title="Exportar a PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3v13M7 11l5 5 5-5M5 20h14"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Exportar PDF
+      </button>
     </div>
   </nav>
 
@@ -36,9 +45,26 @@
         <h1>Paula <em>Giudici</em></h1>
         <p class="hero-subtitle">Estudiante de Programación · La Plata, Buenos Aires</p>
 
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/paula-giudici" target="_blank" rel="noopener" class="social-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Paulagiudici" target="_blank" rel="noopener" class="social-btn social-btn--ghost">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+
         <a href="#contacto" class="hero-cta">
           Contactame
-          <svg width="16" height="16">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor"
                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -47,8 +73,8 @@
 
       <div class="profile-wrap fade-in">
         <img class="profile-img"
-             src="Image 29.jpg"
-             alt="Foto de perfil" />
+             src="Image_29_.jpg"
+             alt="Foto de perfil de Paula Giudici" />
         <span class="profile-badge">💻 Open to work</span>
       </div>
     </section>
@@ -56,11 +82,12 @@
     <!-- SOBRE MÍ -->
     <section id="sobre-mi">
       <div class="section-label fade-in">Sobre mí</div>
-      <h2 class="section-title fade-in">Aprendiendo a construir el mundo digital.</h2>
+      <h2 class="section-title fade-in">Aprendiendo a construir<br/>el mundo digital.</h2>
 
       <p class="about-text fade-in">
-        Soy <strong>Paula Giudici</strong>, estudiante de Programación en La Plata. Me apasiona el desarrollo web,
-        el diseño UX/UI y la tecnología aplicada a la resolución de problemas.
+        Soy <strong>Paula Giudici</strong>, estudiante de la Tecnicatura Universitaria en Programación en La Plata.
+        Me apasiona el desarrollo web, el diseño UX/UI y la tecnología aplicada a la resolución de problemas reales.
+        Siempre con Chinche al lado y mate en mano. 🐾
       </p>
 
       <div class="stats-row fade-in">
@@ -68,12 +95,10 @@
           <div class="stat-number">1°</div>
           <div class="stat-label">Año TUP</div>
         </div>
-
         <div class="stat-item">
           <div class="stat-number">3+</div>
           <div class="stat-label">Proyectos web</div>
         </div>
-
         <div class="stat-item">
           <div class="stat-number">∞</div>
           <div class="stat-label">Ganas de aprender</div>
@@ -84,67 +109,43 @@
     <!-- EXPERIENCIA -->
     <section id="experiencia">
       <div class="section-label fade-in">Trayectoria</div>
-      <h2 class="section-title fade-in">Experiencia & Formación</h2>
+      <h2 class="section-title fade-in">Experiencia &amp; Formación</h2>
 
       <div class="exp-list">
 
-        <!-- CARD 1 -->
         <div class="exp-card fade-in">
           <div class="exp-logo">🛒</div>
-
           <div>
             <div class="exp-header">
               <span class="exp-role">Asistente de E-commerce</span>
               <span class="exp-period">Mar 2023 — Presente</span>
             </div>
-
             <div class="exp-company">
-              <a href="https://www.mercadolibre.com.ar" target="_blank">
-                Mercado Libre
-              </a>
+              <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener">Mercado Libre</a>
             </div>
-
-            <p class="exp-desc">
-              Gestión de publicaciones, análisis de métricas y automatización de reportes.
-            </p>
-
-            <a href="mailto:contacto@mercadolibre.com" class="exp-email">
-              ✉ contacto@mercadolibre.com
-            </a>
+            <p class="exp-desc">Gestión de publicaciones, análisis de métricas y automatización de reportes.</p>
+            <a href="mailto:contacto@mercadolibre.com" class="exp-email">✉ contacto@mercadolibre.com</a>
           </div>
         </div>
 
-        <!-- CARD 2 -->
         <div class="exp-card fade-in">
           <div class="exp-logo">📱</div>
-
           <div>
             <div class="exp-header">
               <span class="exp-role">Community Manager</span>
               <span class="exp-period">Ene 2022 — Feb 2023</span>
             </div>
-
             <div class="exp-company">
-              <a href="https://www.tiendanube.com" target="_blank">
-                Tienda Nube
-              </a>
+              <a href="https://www.tiendanube.com" target="_blank" rel="noopener">Tienda Nube</a>
             </div>
-
-            <p class="exp-desc">
-              Gestión de redes, campañas y contenido orientado a conversión.
-            </p>
-
-            <a href="mailto:contacto@tiendanube.com" class="exp-email">
-              ✉ contacto@tiendanube.com
-            </a>
+            <p class="exp-desc">Gestión de redes, campañas y contenido orientado a conversión.</p>
+            <a href="mailto:contacto@tiendanube.com" class="exp-email">✉ contacto@tiendanube.com</a>
           </div>
         </div>
 
       </div>
 
-      <!-- FORMACIÓN -->
       <div class="edu-subheading fade-in">Formación académica</div>
-
       <div class="edu-list">
 
         <div class="edu-item fade-in">
@@ -177,38 +178,26 @@
 
         <div class="skill-card fade-in">
           <span class="skill-icon">🌐</span>
-          <div class="skill-name">HTML & CSS</div>
+          <div class="skill-name">HTML &amp; CSS</div>
           <div class="skill-level">Intermedio</div>
-          <p class="skill-desc">
-            Diseño responsive, Flexbox, Grid, animaciones.
-          </p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="75%"></div>
-          </div>
+          <p class="skill-desc">Diseño responsive, Flexbox, Grid, animaciones.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
         </div>
 
         <div class="skill-card fade-in">
           <span class="skill-icon">⚡</span>
           <div class="skill-name">JavaScript</div>
           <div class="skill-level">Intermedio</div>
-          <p class="skill-desc">
-            DOM, eventos, asincronía, fetch API.
-          </p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="60%"></div>
-          </div>
+          <p class="skill-desc">DOM, eventos, asincronía, fetch API.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="60%"></div></div>
         </div>
 
         <div class="skill-card fade-in">
           <span class="skill-icon">🐍</span>
           <div class="skill-name">Python</div>
           <div class="skill-level">Básico</div>
-          <p class="skill-desc">
-            Estructuras, funciones, automatizaciones básicas.
-          </p>
-          <div class="skill-bar">
-            <div class="skill-fill" data-width="40%"></div>
-          </div>
+          <p class="skill-desc">Estructuras, funciones, automatizaciones básicas.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="40%"></div></div>
         </div>
 
       </div>
@@ -221,7 +210,6 @@
 
       <div class="contact-grid">
 
-        <!-- Info -->
         <div class="fade-in">
           <p class="contact-info-text">
             Estoy abierta a oportunidades laborales, proyectos y prácticas profesionales.
@@ -231,35 +219,43 @@
             <span class="contact-icon">📍</span>
             <span>La Plata, Buenos Aires</span>
           </div>
-
           <div class="contact-detail">
             <span class="contact-icon">📧</span>
+            <span><a href="mailto:paula@example.com">paula@example.com</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">💼</span>
             <span>
-              <a href="mailto:paula@example.com">paula@example.com</a>
+              <a href="https://www.linkedin.com/in/paula-giudici" target="_blank" rel="noopener">
+                linkedin.com/in/paula-giudici
+              </a>
+            </span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">🐙</span>
+            <span>
+              <a href="https://github.com/Paulagiudici" target="_blank" rel="noopener">
+                github.com/Paulagiudici
+              </a>
             </span>
           </div>
         </div>
 
-        <!-- Form -->
         <div class="fade-in">
           <form id="contact-form" novalidate>
             <div class="form-group">
               <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" required />
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
             </div>
-
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" required />
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
             </div>
-
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" required></textarea>
+              <textarea id="mensaje" name="mensaje" placeholder="Contame en qué puedo ayudarte..." required></textarea>
             </div>
-
             <button type="submit" class="btn-submit">Enviar mensaje →</button>
-
             <div class="form-success" id="form-success">
               ✓ ¡Gracias! Te respondo a la brevedad.
             </div>
@@ -272,16 +268,22 @@
     <!-- FOOTER -->
     <footer>
       <span class="footer-text">© 2025 <span class="footer-accent">Paula Giudici</span></span>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/paula-giudici" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+        <span class="footer-sep">·</span>
+        <a href="https://github.com/Paulagiudici" target="_blank" rel="noopener" class="footer-social">GitHub</a>
+      </div>
       <span class="footer-text">HTML · CSS · JavaScript</span>
     </footer>
 
   </div>
 
   <!-- Botón volver arriba -->
-  <button id="btn-top" aria-label="Volver al inicio">
-    <svg width="18" height="18">
+  <button id="btn-top" aria-label="Volver al inicio" title="Volver al inicio">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
       <path d="M9 14V4M4 9l5-5 5 5"
-            stroke="currentColor" stroke-width="2"/>
+            stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 
