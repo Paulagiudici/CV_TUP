@@ -1,6 +1,6 @@
 # Trabajo práctico nº1. Curriculum Web - Giudici Paula - URL Proyecto
 
-Este es un currículum vitae digital desarrollado como parte del Trabajo Práctico N°1. Incluye secciones de encabezado, sobre mí, experiencia, habilidades y contacto, con estilos CSS y funcionalidad JavaScript básica.
+Este es un currículum vitae digital desarrollado como parte del Trabajo Práctico N°1. Incluye secciones de encabezado,con datos ficticios, experiencia, habilidades y contacto, con estilos CSS y funcionalidad JavaScript básica.
 
 ## Tecnologías utilizadas
 - HTML5
@@ -8,4 +8,4 @@ Este es un currículum vitae digital desarrollado como parte del Trabajo Prácti
 - JavaScript
 
 ## Despliegue
-El proyecto está hosteado en GitHub Pages. URL: [Agregar URL aquí después de configurar GitHub Pages]
+El proyecto está hosteado en GitHub Pages. URL:(https://paulagiudici.github.io/CV_TUP/)
