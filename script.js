@@ -1,32 +1,22 @@
-/* ───────────────────────────────
-   1. Botón "Volver al inicio"
-──────────────────────────────── */
-var btnTop = document.getElementById("btn-top");
+// Botón volver arriba
+const btnTop = document.getElementById("btn-top");
 
-btnTop.addEventListener("click", function () {
+window.addEventListener("scroll", () => {
+  btnTop.classList.toggle("visible", window.scrollY > 400);
+});
+
+btnTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 400) {
-    btnTop.classList.add("visible");
-  } else {
-    btnTop.classList.remove("visible");
-  }
-});
+// Fade-in
+const fadeEls = document.querySelectorAll(".fade-in");
 
-/* ───────────────────────────────
-   2. Fade-in al hacer scroll
-──────────────────────────────── */
-var fadeEls = document.querySelectorAll(".fade-in");
-
-var fadeObserver = new IntersectionObserver(
-  function (entries) {
-    entries.forEach(function (entry, i) {
+const fadeObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(function () {
-          entry.target.classList.add("visible");
-        }, i * 70);
+        setTimeout(() => entry.target.classList.add("visible"), i * 80);
         fadeObserver.unobserve(entry.target);
       }
     });
@@ -34,23 +24,17 @@ var fadeObserver = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-fadeEls.forEach(function (el) {
-  fadeObserver.observe(el);
-});
+fadeEls.forEach(el => fadeObserver.observe(el));
 
-/* ───────────────────────────────
-   3. Animación barras de skills
-──────────────────────────────── */
-var skillCards = document.querySelectorAll(".skill-card");
+// Animación barras
+const skillCards = document.querySelectorAll(".skill-card");
 
-var barObserver = new IntersectionObserver(
-  function (entries) {
-    entries.forEach(function (entry) {
+const barObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        var fill = entry.target.querySelector(".skill-fill");
-        if (fill) {
-          fill.style.width = fill.getAttribute("data-width");
-        }
+        const fill = entry.target.querySelector(".skill-fill");
+        if (fill) fill.style.width = fill.dataset.width;
         barObserver.unobserve(entry.target);
       }
     });
@@ -58,29 +42,26 @@ var barObserver = new IntersectionObserver(
   { threshold: 0.3 }
 );
 
-skillCards.forEach(function (card) {
-  barObserver.observe(card);
-});
+skillCards.forEach(card => barObserver.observe(card));
 
-/* ───────────────────────────────
-   4. Formulario de contacto
-──────────────────────────────── */
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+// Formulario
+document.getElementById("contact-form").addEventListener("submit", e => {
   e.preventDefault();
 
-  var nombre = document.getElementById("nombre").value.trim();
-  var email = document.getElementById("email").value.trim();
-  var mensaje = document.getElementById("mensaje").value.trim();
+  const nombre = document.getElementById("nombre").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
 
-  if (nombre === "" || email === "" || mensaje === "") {
-    alert("Por favor completá todos los campos.");
+  if (!nombre || !email || !mensaje) {
+    alert("Todos los campos son obligatorios.");
     return;
   }
 
-  document.getElementById("form-success").style.display = "block";
+  const msg = document.getElementById("form-success");
+  msg.style.display = "block";
 
   setTimeout(() => {
-    document.getElementById("form-success").style.display = "none";
+    msg.style.display = "none";
     e.target.reset();
   }, 2500);
 });

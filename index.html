@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,6 +17,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#inicio" class="nav-logo">PG.</a>
+
       <ul class="nav-links">
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
@@ -30,18 +31,24 @@
 
     <!-- HERO -->
     <section id="inicio">
-      <div class="hero-content">
+      <div class="hero-content fade-in">
         <div class="hero-eyebrow">Disponible para trabajar</div>
         <h1>Paula <em>Giudici</em></h1>
         <p class="hero-subtitle">Estudiante de Programación · La Plata, Buenos Aires</p>
+
         <a href="#contacto" class="hero-cta">
           Contactame
-          <svg width="16" height="16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
       </div>
 
-      <div class="profile-wrap">
-        <img class="profile-img" src="https://images.pexels.com/photos/3771807/pexels-photo-3771807.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Foto de perfil"/>
+      <div class="profile-wrap fade-in">
+        <img class="profile-img"
+             src="https://images.pexels.com/photos/3771807/pexels-photo-3771807.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+             alt="Foto de perfil" />
         <span class="profile-badge">💻 Open to work</span>
       </div>
     </section>
@@ -50,18 +57,23 @@
     <section id="sobre-mi">
       <div class="section-label fade-in">Sobre mí</div>
       <h2 class="section-title fade-in">Aprendiendo a construir el mundo digital.</h2>
+
       <p class="about-text fade-in">
-        Soy <strong>Paula Giudici</strong>, estudiante de Programación en La Plata. Me apasiona el desarrollo web, el diseño UX/UI y aprender nuevas tecnologías.
+        Soy <strong>Paula Giudici</strong>, estudiante de Programación en La Plata. Me apasiona el desarrollo web,
+        el diseño UX/UI y la tecnología aplicada a la resolución de problemas.
       </p>
+
       <div class="stats-row fade-in">
         <div class="stat-item">
           <div class="stat-number">1°</div>
           <div class="stat-label">Año TUP</div>
         </div>
+
         <div class="stat-item">
           <div class="stat-number">3+</div>
           <div class="stat-label">Proyectos web</div>
         </div>
+
         <div class="stat-item">
           <div class="stat-number">∞</div>
           <div class="stat-label">Ganas de aprender</div>
@@ -75,13 +87,84 @@
       <h2 class="section-title fade-in">Experiencia & Formación</h2>
 
       <div class="exp-list">
-        <!-- Tarjetas de experiencia (sin cambios) -->
+
+        <!-- CARD 1 -->
+        <div class="exp-card fade-in">
+          <div class="exp-logo">🛒</div>
+
+          <div>
+            <div class="exp-header">
+              <span class="exp-role">Asistente de E-commerce</span>
+              <span class="exp-period">Mar 2023 — Presente</span>
+            </div>
+
+            <div class="exp-company">
+              <a href="https://www.mercadolibre.com.ar" target="_blank">
+                Mercado Libre
+              </a>
+            </div>
+
+            <p class="exp-desc">
+              Gestión de publicaciones, análisis de métricas y automatización de reportes.
+            </p>
+
+            <a href="mailto:contacto@mercadolibre.com" class="exp-email">
+              ✉ contacto@mercadolibre.com
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="exp-card fade-in">
+          <div class="exp-logo">📱</div>
+
+          <div>
+            <div class="exp-header">
+              <span class="exp-role">Community Manager</span>
+              <span class="exp-period">Ene 2022 — Feb 2023</span>
+            </div>
+
+            <div class="exp-company">
+              <a href="https://www.tiendanube.com" target="_blank">
+                Tienda Nube
+              </a>
+            </div>
+
+            <p class="exp-desc">
+              Gestión de redes, campañas y contenido orientado a conversión.
+            </p>
+
+            <a href="mailto:contacto@tiendanube.com" class="exp-email">
+              ✉ contacto@tiendanube.com
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Formación -->
+      <!-- FORMACIÓN -->
       <div class="edu-subheading fade-in">Formación académica</div>
+
       <div class="edu-list">
-        <!-- Cards (idem original) -->
+
+        <div class="edu-item fade-in">
+          <div class="edu-dot"></div>
+          <div>
+            <div class="edu-year">2024 — En curso</div>
+            <div class="edu-name">Tecnicatura Universitaria en Programación</div>
+            <div class="edu-inst">UTN — La Plata</div>
+          </div>
+        </div>
+
+        <div class="edu-item fade-in">
+          <div class="edu-dot"></div>
+          <div>
+            <div class="edu-year">2023</div>
+            <div class="edu-name">Introducción al Desarrollo Web</div>
+            <div class="edu-inst">Argentina Programa</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -91,7 +174,43 @@
       <h2 class="section-title fade-in">Mis habilidades</h2>
 
       <div class="skills-grid">
-        <!-- Cards de skills (sin cambios) -->
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">🌐</span>
+          <div class="skill-name">HTML & CSS</div>
+          <div class="skill-level">Intermedio</div>
+          <p class="skill-desc">
+            Diseño responsive, Flexbox, Grid, animaciones.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="75%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">⚡</span>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Intermedio</div>
+          <p class="skill-desc">
+            DOM, eventos, asincronía, fetch API.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="60%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">🐍</span>
+          <div class="skill-name">Python</div>
+          <div class="skill-level">Básico</div>
+          <p class="skill-desc">
+            Estructuras, funciones, automatizaciones básicas.
+          </p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="40%"></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -101,30 +220,52 @@
       <h2 class="section-title fade-in">¿Hablamos?</h2>
 
       <div class="contact-grid">
-        <!-- Descripción + mail -->
+
+        <!-- Info -->
         <div class="fade-in">
-          <p class="contact-info-text">Estoy abierta a oportunidades... ¡No dudes en escribirme!</p>
+          <p class="contact-info-text">
+            Estoy abierta a oportunidades laborales, proyectos y prácticas profesionales.
+          </p>
+
+          <div class="contact-detail">
+            <span class="contact-icon">📍</span>
+            <span>La Plata, Buenos Aires</span>
+          </div>
+
+          <div class="contact-detail">
+            <span class="contact-icon">📧</span>
+            <span>
+              <a href="mailto:paula@example.com">paula@example.com</a>
+            </span>
+          </div>
         </div>
 
-        <!-- Formulario -->
+        <!-- Form -->
         <div class="fade-in">
           <form id="contact-form" novalidate>
             <div class="form-group">
-              <label>Nombre</label>
-              <input type="text" id="nombre" required>
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" required />
             </div>
+
             <div class="form-group">
-              <label>Email</label>
-              <input type="email" id="email" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
             </div>
+
             <div class="form-group">
-              <label>Mensaje</label>
+              <label for="mensaje">Mensaje</label>
               <textarea id="mensaje" required></textarea>
             </div>
+
             <button type="submit" class="btn-submit">Enviar mensaje →</button>
-            <div class="form-success" id="form-success">✓ ¡Gracias! Te respondo a la brevedad.</div>
+
+            <div class="form-success" id="form-success">
+              ✓ ¡Gracias! Te respondo a la brevedad.
+            </div>
           </form>
         </div>
+
       </div>
     </section>
 
@@ -133,15 +274,17 @@
       <span class="footer-text">© 2025 <span class="footer-accent">Paula Giudici</span></span>
       <span class="footer-text">HTML · CSS · JavaScript</span>
     </footer>
+
   </div>
 
   <!-- Botón volver arriba -->
-  <button id="btn-top">
-    <svg width="18" height="18"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="2"/></svg>
+  <button id="btn-top" aria-label="Volver al inicio">
+    <svg width="18" height="18">
+      <path d="M9 14V4M4 9l5-5 5 5"
+            stroke="currentColor" stroke-width="2"/>
+    </svg>
   </button>
 
-  <!-- Archivo JS externo -->
   <script src="script.js"></script>
-
 </body>
 </html>
