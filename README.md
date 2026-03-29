@@ -32,5 +32,4 @@ CV_TUP/
 ```
 
 ## Despliegue
-
-El proyecto está hosteado en GitHub Pages: https://paulagiudici.github.io/CV_TUP
+El proyecto está hosteado en GitHub Pages. URL: [Agregar URL aquí después de configurar GitHub Pages]
