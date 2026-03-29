@@ -27,7 +27,7 @@ CV_TUP/
 ├── index.html
 ├── style.css
 ├── script.js
-├── Image_29_.jpg
+├── Image 29 .jpg
 └── README.md
 ```
 
