@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Juan Pérez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="inicio">
+        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Foto de perfil" class="profile-pic">
+        <h1 class="name">Juan Pérez</h1>
+        <p class="title">Desarrollador Web</p>
+    </header>
+
+    <section class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy un apasionado desarrollador web con experiencia en la creación de aplicaciones interactivas y responsivas. Me encanta aprender nuevas tecnologías y colaborar en proyectos innovadores.</p>
+    </section>
+
+    <section class="experience">
+        <h2>Experiencia / Formación</h2>
+        <div class="job">
+            <h3>Desarrollador Frontend en <a href="https://www.google.com" target="_blank">Google</a></h3>
+            <p>Trabajé en el desarrollo de interfaces de usuario para productos de Google, utilizando tecnologías modernas como React y Node.js.</p>
+            <p>Contacto: <a href="mailto:juan.perez@gmail.com">juan.perez@gmail.com</a></p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <button id="back-to-top" class="btn">Volver al inicio</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
