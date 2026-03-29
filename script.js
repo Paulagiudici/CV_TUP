@@ -10,6 +10,7 @@ btnTop.addEventListener('click', function () {
 });
 
 /* ── 2. Fade-in al hacer scroll ── */
+/* Observer para animaciones de entrada cuando elementos entran en viewport */
 var fadeEls = document.querySelectorAll('.fade-in');
 
 var fadeObserver = new IntersectionObserver(function (entries) {
@@ -41,6 +42,7 @@ var barObserver = new IntersectionObserver(function (entries) {
 skillCards.forEach(function (card) { barObserver.observe(card); });
 
 /* ── 4. Formulario de contacto ── */
+/* Validación básica del formulario y simulación de envío */
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -78,4 +80,11 @@ document.getElementById('btn-pdf').addEventListener('click', function () {
   setTimeout(function () {
     window.print();
   }, 150);
+});
+
+/* ── 6. Modo oscuro ── */
+document.getElementById('theme-toggle').addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+  var icon = this.textContent;
+  this.textContent = icon === '🌙' ? '☀️' : '🌙';
 });

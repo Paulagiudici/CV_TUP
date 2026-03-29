@@ -1,6 +1,6 @@
 # cv-giudici-paula
 
-Trabajo práctico nº1. Curriculum Web - Giudici Paula - URL Proyecto: https://paulagiudici.github.io/CV_TUP
+Trabajo práctico nº1. Curriculum Web - Giudici Paula - 
 
 ## Descripción
 
@@ -32,4 +32,4 @@ CV_TUP/
 ```
 
 ## Despliegue
-El proyecto está hosteado en GitHub Pages. URL: [Agregar URL aquí después de configurar GitHub Pages]
+El proyecto está hosteado en GitHub Pages. URL Proyecto: https://paulagiudici.github.io/CV_TUP

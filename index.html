@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1c-1 0-2 1-2 2v10c0 1 1 2 2 2s2-1 2-2V3c0-1-1-2-2-2z' fill='%234CAF50'/%3E%3Cpath d='M6 3c0-1 1-2 2-2s2 1 2 2v10c0 1-1 2-2 2s-2-1-2-2V3z' fill='%23388E3C'/%3E%3C/svg%3E" />
 </head>
 <body>
 
@@ -33,6 +34,9 @@
         </svg>
         Exportar PDF
       </button>
+      <button id="theme-toggle" title="Cambiar a modo oscuro" class="btn-theme">
+        🌙
+      </button>
     </div>
   </nav>
 
@@ -40,6 +44,7 @@
 
     <!-- HERO -->
     <section id="inicio">
+      <!-- Sección de presentación con contenido principal y foto de perfil -->
       <div class="hero-content fade-in">
         <div class="hero-eyebrow">Disponible para trabajar</div>
         <h1>Paula <em>Giudici</em></h1>
@@ -72,6 +77,7 @@
       </div>
 
       <div class="profile-wrap fade-in">
+        <!-- Imagen de perfil con alt descriptivo para accesibilidad y lazy loading potencial -->
         <img class="profile-img"
              src="Image_29_.jpg"
              alt="Foto de perfil de Paula Giudici" />
@@ -198,6 +204,30 @@
           <div class="skill-level">Básico</div>
           <p class="skill-desc">Estructuras, funciones, automatizaciones básicas.</p>
           <div class="skill-bar"><div class="skill-fill" data-width="40%"></div></div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">📋</span>
+          <div class="skill-name">Trello & Jira</div>
+          <div class="skill-level">Intermedio</div>
+          <p class="skill-desc">Gestión de proyectos, tableros Kanban, seguimiento de tareas.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">🔄</span>
+          <div class="skill-name">Metodologías Ágiles</div>
+          <div class="skill-level">Básico</div>
+          <p class="skill-desc">Scrum, sprints, retrospectivas, trabajo en equipo.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="50%"></div></div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <span class="skill-icon">🤖</span>
+          <div class="skill-name">Inteligencia Artificial</div>
+          <div class="skill-level">Básico</div>
+          <p class="skill-desc">Uso de herramientas IA para desarrollo, prompts efectivos.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="45%"></div></div>
         </div>
 
       </div>
