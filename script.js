@@ -46,11 +46,11 @@ skillCards.forEach(function (card) { barObserver.observe(card); });
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  var nombre  = document.getElementById('nombre').value.trim();
-  var email   = document.getElementById('email').value.trim();
-  var mensaje = document.getElementById('mensaje').value.trim();
+  var fullName   = document.getElementById('name').value.trim();
+  var email      = document.getElementById('email').value.trim();
+  var messageTxt = document.getElementById('message').value.trim();
 
-  if (!nombre || !email || !mensaje) {
+  if (!fullName || !email || !messageTxt) {
     alert('Todos los campos son obligatorios.');
     return;
   }
