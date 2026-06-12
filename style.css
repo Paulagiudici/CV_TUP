@@ -1,3 +1,52 @@
+/* ── Fuentes locales ── */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('DM Sans Light'), url('./fonts/DM-Sans-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Sans Regular'), url('./fonts/DM-Sans-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('DM Sans Medium'), url('./fonts/DM-Sans-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('DM Sans SemiBold'), url('./fonts/DM-Sans-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Serif Display Regular'), url('./fonts/DM-Serif-Display-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Serif Display Italic'), url('./fonts/DM-Serif-Display-Italic.ttf') format('truetype');
+}
+
 /* ── CSS Custom Properties ── */
 /* Variables CSS para colores, tipografía y transiciones, incluyendo modo oscuro */
 :root {
@@ -425,14 +474,14 @@ body::before {
   font-weight: 600;
 }
 
-.exp-company a {
+.exp-company .link-reset {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition);
 }
 
-.exp-company a:hover { border-color: var(--color-accent2); }
+.exp-company .link-reset:hover { border-color: var(--color-accent2); }
 
 .exp-desc {
   color: #78716c;
@@ -562,18 +611,42 @@ body::before {
 }
 
 .skill-bar {
-  height: 4px;
+  margin-top: 14px;
+}
+
+.skill-progress {
+  width: 100%;
+  height: 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
   background: var(--color-border);
-  border-radius: 2px;
+  border-radius: 999px;
   overflow: hidden;
 }
 
-.skill-fill {
-  height: 100%;
+.skill-progress::-webkit-progress-bar {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+.skill-progress::-webkit-progress-value {
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent2));
-  border-radius: 2px;
-  width: 0;
-  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  border-radius: 999px;
+}
+
+.skill-progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent2));
+  border-radius: 999px;
+}
+
+.skill-progress::-ms-fill {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent2));
+  border-radius: 999px;
+}
+
+.skill-progress {
+  transition: opacity .5s ease;
 }
 
 /* ── Contacto ── */
@@ -763,7 +836,8 @@ footer {
   .content-section { padding: 32px 0; }
   .exp-card, .edu-item, .skill-card { box-shadow: none; border-color: #ddd; }
   .fade-in { opacity: 1 !important; transform: none !important; }
-  .skill-fill { transition: none; }
+  .skill-progress { transition: none !important; }
+  a { color: inherit !important; text-decoration: none; }
 }
 
 /* ── Responsive ── */

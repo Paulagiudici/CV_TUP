@@ -32,8 +32,8 @@ var skillCards = document.querySelectorAll('.skill-card');
 var barObserver = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
-      var fill = entry.target.querySelector('.skill-fill');
-      if (fill) fill.style.width = fill.getAttribute('data-width');
+      var progress = entry.target.querySelector('.skill-progress');
+      if (progress) progress.value = progress.getAttribute('data-value');
       barObserver.unobserve(entry.target);
     }
   });
@@ -46,11 +46,11 @@ skillCards.forEach(function (card) { barObserver.observe(card); });
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  var nombre  = document.getElementById('nombre').value.trim();
-  var email   = document.getElementById('email').value.trim();
-  var mensaje = document.getElementById('mensaje').value.trim();
+  var fullName   = document.getElementById('name').value.trim();
+  var email      = document.getElementById('email').value.trim();
+  var messageTxt = document.getElementById('message').value.trim();
 
-  if (!nombre || !email || !mensaje) {
+  if (!fullName || !email || !messageTxt) {
     alert('Todos los campos son obligatorios.');
     return;
   }
@@ -72,8 +72,8 @@ document.getElementById('btn-pdf').addEventListener('click', function () {
   });
 
   // Forzar barras de habilidades al ancho correcto
-  document.querySelectorAll('.skill-fill').forEach(function (fill) {
-    fill.style.width = fill.getAttribute('data-width');
+  document.querySelectorAll('.skill-progress').forEach(function (progress) {
+    progress.value = progress.getAttribute('data-value');
   });
 
   // Pequeña pausa para que los estilos se apliquen, luego imprimir
