@@ -760,11 +760,10 @@ footer {
   body { background: #fff !important; }
   body::before { display: none; }
   .container { max-width: 100%; }
-  section { padding: 32px 0; }
+  .content-section { padding: 32px 0; }
   .exp-card, .edu-item, .skill-card { box-shadow: none; border-color: #ddd; }
   .fade-in { opacity: 1 !important; transform: none !important; }
   .skill-fill { transition: none; }
-  a { color: inherit !important; text-decoration: none; }
 }
 
 /* ── Responsive ── */
