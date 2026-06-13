@@ -124,11 +124,11 @@ body::before {
   z-index: 1;
 }
 
-section { padding: 80px 0; }
-section + section { border-top: 1px solid var(--color-border); }
+.content-section { padding: 80px 0; }
+.content-section + .content-section { border-top: 1px solid var(--color-border); }
 
 /* ── Nav ── */
-nav {
+.site-nav {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -157,7 +157,7 @@ nav {
 
 .nav-links { display: flex; gap: 24px; list-style: none; }
 
-.nav-links a {
+.nav-link {
   color: var(--color-muted);
   text-decoration: none;
   font-size: .78rem;
@@ -167,7 +167,7 @@ nav {
   transition: color var(--transition);
 }
 
-.nav-links a:hover { color: var(--color-text); }
+.nav-link:hover { color: var(--color-text); }
 
 .btn-theme {
   background: none;
@@ -236,7 +236,7 @@ nav {
   flex-shrink: 0;
 }
 
-h1 {
+.hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.6rem, 6vw, 4.2rem);
   line-height: 1.08;
@@ -244,7 +244,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-h1 em {
+.hero-title-accent {
   font-style: italic;
   color: var(--color-accent);
 }
@@ -833,7 +833,7 @@ footer {
   body { background: #fff !important; }
   body::before { display: none; }
   .container { max-width: 100%; }
-  section { padding: 32px 0; }
+  .content-section { padding: 32px 0; }
   .exp-card, .edu-item, .skill-card { box-shadow: none; border-color: #ddd; }
   .fade-in { opacity: 1 !important; transform: none !important; }
   .skill-progress { transition: none !important; }
